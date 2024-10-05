@@ -12,7 +12,7 @@ class Pagecontroller extends Controller
     public function index()
     {
 
-        $jobs = Job::all();
+        $jobs = Job::orderBy('id', 'desc')->paginate(5);
 
         $success = true;
 
